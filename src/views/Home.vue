@@ -1,7 +1,6 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <HelloWorld :items="items" msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
@@ -13,6 +12,18 @@ export default {
   name: "home",
   components: {
     HelloWorld
+  },
+  data(){
+    return {
+      items:[
+        {
+          title:"南京油条放心店",
+          day:"09-25",
+          time:"17:23",
+          money:`${Math.floor(Math.random() * 11) + 20}.00`
+        }
+      ]
+    }
   }
 };
 </script>
