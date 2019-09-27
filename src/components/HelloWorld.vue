@@ -2,13 +2,13 @@
   <div class="hello">
     <div class="item" v-for="(item, index) in items" :key="index">
       <div class="item-content">
-        <div class="item-content_title">{{item.title}}</div>
+        <div class="item-content_title">{{shopName[Math.floor((Math.random()*shopName.length))]}}</div>
         <div class="item-content_time">
           <div class="item-content_day">{{item.day}}</div>
-          <div >{{item.time}}</div>
+          <div >{{`${Math.floor(Math.random() * 2) + 18}:${Math.floor(Math.random() * 41) + 10}`}}</div>
         </div>
       </div>
-      <div class="item-money">{{item.money}}</div>
+      <div class="item-money">{{`${Math.floor(Math.random() * 11) + 20}.${Math.floor(Math.random() * 40) + 10}`}}</div>
     </div>
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
   },
   data() {
     return {
-      
+      shopName: ["张记手撕烤鸭","觅姐可以喝的麻辣烫","串越舌尖成都冒菜", "鱼小鲜椒麻鱼","杨国福麻辣烫","呱呱叫(秘制)酸菜鱼" ]
     };
   }
 };
@@ -45,6 +45,8 @@ export default {
 }
 .item-content_title {
   font-size: 40px;
+  width: 600px;
+  text-align: left;
 }
 .item-content_time {
   display: flex;
@@ -58,6 +60,6 @@ export default {
 .item-money {
   margin-top: 42px;
   font-size: 56px;
-  margin-left: 469px;
+  margin-left: 155px;
 }
 </style>

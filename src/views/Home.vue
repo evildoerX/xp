@@ -18,9 +18,15 @@ export default {
       items:[
         {
           title:"南京油条放心店",
+          day:"09-23",
+        },
+        {
+          title:"南京油条放心店",
+          day:"09-24",
+        },
+        {
+          title:"南京油条放心店",
           day:"09-25",
-          time:"17:23",
-          money:`${Math.floor(Math.random() * 11) + 20}.00`
         }
       ]
     }
