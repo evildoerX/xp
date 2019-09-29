@@ -1,31 +1,52 @@
 <template>
   <div class="hello">
-    <div class="item" v-for="(item, index) in items" :key="index">
+    <div class="item" v-for="(item, index) in 126" :key="index">
       <div class="item-content">
-        <div class="item-content_title">{{shopName[Math.floor((Math.random()*shopName.length))]}}</div>
+        <div class="item-content_title">{{shopData[index]}}</div>
         <div class="item-content_time">
-          <div class="item-content_day">{{item.day}}</div>
-          <div >{{`${Math.floor(Math.random() * 2) + 18}:${Math.floor(Math.random() * 41) + 10}`}}</div>
+          <div class="item-content_day">{{dayData[index]}}</div>
+          <div>{{timeData[index]}}</div>
         </div>
       </div>
-      <div class="item-money">{{`${Math.floor(Math.random() * 11) + 20}.${Math.floor(Math.random() * 40) + 10}`}}</div>
+      <div
+        class="item-money"
+      >{{`${Math.floor(Math.random() * 11) + 20}.${Math.floor(Math.random() * 40) + 10}`}}</div>
     </div>
   </div>
 </template>
 
 <script>
+import { day, time, shopName } from "./time.js";
 export default {
   name: "HelloWorld",
-  props: {
-    items: {
-      type:Array,
-      default:[{}]
-    }
-  },
   data() {
     return {
-      shopName: ["张记手撕烤鸭","觅姐可以喝的麻辣烫","串越舌尖成都冒菜", "鱼小鲜椒麻鱼","杨国福麻辣烫","呱呱叫(秘制)酸菜鱼" ]
+      dayData: [],
+      timeData: [],
+      shopData: []
     };
+  },
+
+  created() {
+    this.dayData = day
+    this.timeData =  time,
+    this.shopData = shopName
+    // let dd= [];
+    // for (let index = 0; index < 130; index++) {
+    //   // const element = this.rendomtime();
+    //   // const element = this.shopName[Math.floor((Math.random()* this.shopName.length))]
+    //   const element = `${Math.floor(Math.random() * 11) + 20}.${Math.floor(Math.random() * 40) + 10}`
+    //   dd.push(element)
+    // }
+    // console.log(this.shopData)
+  },
+
+  methods: {
+    rendomtime() {
+      return `${Math.floor(Math.random() * 2) + 18}:${Math.floor(
+        Math.random() * 31
+      ) + 10}`;
+    }
   }
 };
 </script>
@@ -36,7 +57,7 @@ export default {
   display: flex;
   padding: 0 32px;
   background-image: url("./img/bg.png");
-  background-repeat:no-repeat; 
+  background-repeat: no-repeat;
   height: 273px;
 }
 .item-content {
