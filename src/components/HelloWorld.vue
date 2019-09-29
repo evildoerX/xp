@@ -8,9 +8,13 @@
           <div>{{timeData[index]}}</div>
         </div>
       </div>
-      <div
-        class="item-money"
-      >{{`${Math.floor(Math.random() * 11) + 20}.${Math.floor(Math.random() * 40) + 10}`}}</div>
+      <div v-if="shopData[index] ==='鱼小鲜椒麻鱼'" class="item-money">27.80</div>
+      <div v-if="shopData[index] ==='呱呱叫(秘制)酸菜鱼'" class="item-money">31.98</div>
+      <div v-if="shopData[index] ==='张记手撕烤鸭'" class="item-money">20.8</div>
+      <div v-if="shopData[index] ==='喜得美炸鸡汉堡(后宰门店)外卖...'" class="item-money">27.2</div>
+      <div v-if="shopData[index] ==='杨国福麻辣烫'" class="item-money">22.90</div>
+      <div v-if="shopData[index] ==='觅姐可以喝的麻辣烫'" class="item-money">22.92</div>
+      <div v-if="shopData[index] ==='串越舌尖成都冒菜'" class="item-money">24.00</div>
     </div>
   </div>
 </template>
@@ -28,9 +32,8 @@ export default {
   },
 
   created() {
-    this.dayData = day
-    this.timeData =  time,
-    this.shopData = shopName
+    this.dayData = day;
+    (this.timeData = time), (this.shopData = shopName);
     // let dd= [];
     // for (let index = 0; index < 130; index++) {
     //   // const element = this.rendomtime();
