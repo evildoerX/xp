@@ -62,6 +62,7 @@ export default {
   background-image: url("./img/bg.png");
   background-repeat: no-repeat;
   height: 273px;
+  
 }
 .item-content {
   margin-left: 150px;
