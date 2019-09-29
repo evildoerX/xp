@@ -1,34 +1,24 @@
 <template>
   <div class="home">
-    <HelloWorld :items="items" msg="Welcome to Your Vue.js App" />
+    <!-- <HelloWorld /> -->
+    <XP />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
+import XP from "@/components/xiaopiao.vue";
 
 export default {
   name: "home",
   components: {
-    HelloWorld
+    HelloWorld,
+    XP
   },
   data(){
     return {
-      items:[
-        {
-          title:"南京油条放心店",
-          day:"09-23",
-        },
-        {
-          title:"南京油条放心店",
-          day:"09-24",
-        },
-        {
-          title:"南京油条放心店",
-          day:"09-25",
-        }
-      ]
+      
     }
   }
 };
