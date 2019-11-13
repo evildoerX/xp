@@ -2,7 +2,7 @@
   <div class="hello">
     <div class="item" v-for="(item, index) in 126" :key="index">
       <div class="item-content">
-        <div>{{`**********#${Math.floor(Math.random() * 11) + 20}饿了么***********`}}</div>
+        <div>{{`************#${Math.floor(Math.random() * 11) + 20}饿了么*************`}}</div>
         <div class="item-content_title">{{shopData[index]}}</div>
         <div>—— —— 已在线支付 —— ——</div>
         <div class="item-content_time">
@@ -342,7 +342,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
 .item-content {
-  width: 230px;
+  width: 280px;
   margin-top: 100px;
 }
 .item-content_time {
