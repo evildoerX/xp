@@ -2,7 +2,7 @@
   <div class="hello">
     <div class="item" v-for="(item, index) in 126" :key="index">
       <div class="item-content">
-        <div>{{`******************#${Math.floor(Math.random() * 11) + 20}饿了么******************`}}</div>
+        <div>{{`**********#${Math.floor(Math.random() * 11) + 20}饿了么***********`}}</div>
         <div class="item-content_title">{{shopData[index]}}</div>
         <div>—— —— 已在线支付 —— ——</div>
         <div class="item-content_time">
@@ -298,7 +298,7 @@
         <div class="shop-user-info">程**</div>
         <div class="shop-user-info">[超级会员]</div>
         <div class="shop-user-info">17512586076</div>
-        <div class="shop-line">{{`******************饿了么******************`}}</div>
+        <div class="shop-line">{{`**********饿了么**********`}}</div>
       </div>
     </div>
   </div>
@@ -342,7 +342,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
 .item-content {
-  width: 500px;
+  width: 230px;
   margin-top: 100px;
 }
 .item-content_time {
@@ -361,6 +361,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 220px;
 }
 .shop-item-money {
   display: flex;
@@ -368,10 +369,12 @@ export default {
   justify-content: space-between;
   font-size: 24px;
   margin-top: 8px;
+  width: 220px;
 }
 .shop-user-info {
   font-size: 24px;
   margin-top: 8px;
+  width: 220px;
 }
 .shop-line {
   margin-top: 32px;
@@ -381,5 +384,6 @@ export default {
   align-items: center;
   justify-content: space-between;
   font-size: 18px;
+  width: 220px;
 }
 </style>
