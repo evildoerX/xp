@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <div class="item" v-for="(item, index) in 126" :key="index">
+    <div class="item" v-for="(item, index) in 25" :key="index">
       <div class="item-content">
         <div class="item-content_title">{{shopData[index]}}</div>
         <div class="item-content_time">
@@ -34,6 +34,8 @@ export default {
   created() {
     this.dayData = day;
     (this.timeData = time), (this.shopData = shopName);
+    console.log("this.dayData",this.dayData.length);
+    
     // let dd= [];
     // for (let index = 0; index < 130; index++) {
     //   // const element = this.rendomtime();
