@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <div class="item" v-for="(item, index) in 126" :key="index">
+    <div class="item" v-for="(item, index) in 25" :key="index">
       <div class="item-content">
         <div>{{`**********#${Math.floor(Math.random() * 11) + 20}饿了么***********`}}</div>
         <div class="item-content_title">{{shopData[index]}}</div>
